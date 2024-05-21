@@ -1,6 +1,7 @@
 package main
 
 import (
+	"example/databaseConnection"
 	"example/routes"
 	"fmt"
 	"log"
@@ -18,6 +19,8 @@ func main(){
 	}
 	port := os.Getenv("PORT")
 	fmt.Println(port)
+
+	databaseConnection.DBInstance()
 
 	router := routes.CreateRouter()
 	routes.CreateRoutes(router)

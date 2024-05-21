@@ -31,4 +31,11 @@ func CreateRoutes(routerObject *models.Router) {
 
 		json.NewEncoder(w).Encode(response)
 	})
+
+	//Authentication Routes
+	router.HandleFunc("/users/signup",func(w http.ResponseWriter, r *http.Request) {})
+	router.HandleFunc("/users/login",func(w http.ResponseWriter, r *http.Request) {})
+
+	router.HandleFunc("/users",func(w http.ResponseWriter, r *http.Request) {})
+	router.HandleFunc("/users/:user_id",func(w http.ResponseWriter, r *http.Request) {})
 }
